@@ -1,0 +1,387 @@
+/* Main */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body,
+html {
+    font-family: PT Mono, monospace;
+    background: #202020;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ff564d;
+    min-width: 360px;
+}
+/* Header */
+.page-header {
+    padding-left: 200px;
+    font-size: 20px;
+    background-color: #171717;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+    .page-header {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        text-align: center;
+    }
+}
+/* Links */
+a {
+    text-decoration: underline;
+    color: #ff564d;
+}
+
+a:hover {
+    color: #ff766a;
+    transition: color 0.3s ease;
+}
+
+a.menu-link{
+    text-decoration: none;
+}
+/* Blink animation */
+.menu-item, .blink{
+    color: #ff766a;
+}
+
+.blink {
+    font-size: 10px;
+    position: relative;
+    top: -1px;
+    left: 4px;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+/* Page structure */
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.content {
+    -webkit-animation: fadeIn 1s ease;
+    animation: fadeIn 1s ease;
+    width: 810px;
+    margin-top: 14vh;
+    padding-left: 200px;
+    margin-right: 240px;
+    padding-bottom: 100px;
+}
+
+@media (max-width: 1000px) {
+    .content {
+        margin-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        width: 610px;
+    }
+}
+
+@media (max-width: 700px) {
+    .content {
+        width: 530px;
+    }
+}
+
+@media (max-width: 570px) {
+    .content {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: auto;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Page headers */
+.above-header {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+    .above-header {
+        font-size: 16px;
+    }
+}
+
+.header {
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 62px;
+    margin-bottom: 20px;
+}
+
+.sub_header {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 62px;
+}
+
+@media (max-width: 700px) {
+    .header {
+        font-size: 42px;
+        line-height: 50px;
+    }
+}
+/* Page content*/
+p {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 0.4em;
+}
+
+@media (max-width: 700px) {
+    p {
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
+
+.links_wrap {
+    margin-top: 40px;
+}
+
+.email {
+    font-size: 28px;
+    line-height: 34px;
+
+}
+
+@media (max-width: 700px) {
+    .email {
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+
+.links_list {
+    height: 22px;
+    margin-right: 10px;
+    margin-top: 9px;
+}
+
+.links_item {
+    font-size: 18px;
+    line-height: 22px;
+    padding-right: 9px;
+    display: inline-block;
+    margin: 0;
+}
+
+.links_item:first-child {
+    padding-left: 0;
+}
+
+@media (max-width: 700px) {
+    .links_item {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+/* Projects list */
+.project-list {
+    margin-top: 20px;
+}
+
+.project-info-list{
+    margin-top: 20px;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+    .project-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.project-cover {
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+@media (max-width: 700px) {
+    .project-cover {
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.project-details h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.project-details p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #ff564d;
+}
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gallery-photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hover{
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.hover:hover{
+    transform: scale(1.05);
+}
+/* Image modal window */
+.photo-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.photo-viewer.active {
+    display: flex;
+}
+
+.photo-viewer img {
+    max-width: 90%;
+    max-height: 80%;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.photo-viewer img.zoomed {
+    transform: scale(1.25);
+    cursor: zoom-out;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    font-size: 2em;
+    color: white;
+    padding: 0 10px;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+/* Button */
+.thin-button {
+    background-color: transparent;
+    color: #ff564d;
+    font-size: 18px;
+    padding: 8px 16px;
+    border: 1px solid #ff564d;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.email-button {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 12px;
+    padding: 2px 4px;
+}
+
+.thin-button:hover {
+    background-color: #ff564d;
+    color: #202020;
+    transform: scale(1.00);
+}
+
+/* Email check */
+.copy-check {
+    opacity: 0;
+    font-size: 14px;
+    transition: opacity .3s ease;
+    pointer-events: none;
+}
+
+.copy-check.show {
+    opacity: 1;
+}
